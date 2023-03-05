@@ -1,16 +1,18 @@
-# Project 17 - Javascript Speaks
+# Project 18 - Password Generator
 
-This is Javascript Speaker App built with the `SpeechSynthesis` interface.
+This is Javascript Password Generator App.
 
-The App reads the given text and has such controllers as - play, pause, cancel, clear, speech speed. Text can be paused, canceled or cleared any time. The speech speed can also be changed any time, even when in progress.
+The App creates a password from 4 to 30 characters on user's choise. In the password, besides default lowercase characters, can be included uppercase characters, numbers and symbols. If none of them is chosen the app renders an error message.
 
-Responsive for all screen sizes, without a single media query.
+Light and dark modes available.
 
-**This was my 3rd Javascript project.**
+Responsive for all screen sizes.
+
+**This was my 4th Javascript project.**
 
 ## Checkout the live demo
 
-[Javascript Speaks]()
+[Password Generator]()
 
 ## Built with
 
