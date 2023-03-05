@@ -1,0 +1,148 @@
+.mode-switcher {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 8rem;
+  height: 3.5rem;
+
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-body);
+    transition: background 0.5s;
+    border-radius: 3rem;
+    box-shadow: 5px 5px 25px #bebebe, -5px -5px 15px #fff;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 2rem;
+      left: 0.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+      transition: 0.3s;
+    }
+  }
+
+  &__checkbox {
+    opacity: 0;
+
+    &:checked ~ .mode-switcher__slider {
+      background-color: var(--bg-body);
+      box-shadow: 8px 5px 12px #1c1c1c, -8px -5px 12px #3a3a3a;
+    }
+
+    &:checked ~ .mode-switcher__slider:before {
+      left: calc(100% - (2.5rem + 0.6rem));
+      background: var(--bg-body);
+      box-shadow: inset -3px -2px 5px -2px #fff, inset -10px -4px 0 0 #777;
+    }
+  }
+}
+
+.btn {
+  grid-column: 1 / -1;
+  justify-self: stretch;
+  grid-row: 7;
+
+  font-family: inherit;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: inherit;
+
+  height: 3.8rem;
+  outline: none;
+  border: var(--border-btn);
+  background: transparent;
+  border-radius: 5px;
+
+  cursor: pointer;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0.7rem;
+    left: 0.7rem;
+    height: 100%;
+    background: var(--color-background);
+    z-index: -1;
+    transition: top 0.5s, left 0.5s;
+    border-radius: inherit;
+  }
+
+  &:hover:after {
+    top: 0;
+    left: 0;
+  }
+
+  &--copy {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    color: inherit;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    position: absolute;
+    top: -5px;
+    right: 3px;
+
+    display: none;
+
+    &:before {
+      content: "copied";
+      position: absolute;
+      top: -40px;
+      right: -15px;
+      background: var(--color-background);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      display: none;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 17px;
+      width: 10px;
+      height: 10px;
+      background: var(--color-background);
+      transform: rotate(45deg);
+      display: none;
+    }
+
+    &.active:before,
+    &.active:after {
+      display: block;
+    }
+
+    &.display {
+      display: block;
+    }
+  }
+}
+
+.author {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: var(--color-text);
+  }
+}

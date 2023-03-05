@@ -1,0 +1,65 @@
+:root {
+  --bg-body: #e0e0e0;
+  --color-text: #333;
+  --color-background: #fff;
+
+  --box-shadow-main: 20px 20px 60px #bebebe, -20px -20px 60px #fff;
+  --border-main: 1px solid #e8e8e8;
+  --border-main-hover: 1px solid #fff;
+  --border-btn: 1px solid #000;
+  --color-orange: #ff8c00;
+
+  --font-primary: "Caveat", cursive;
+  --font-secondary: "Source Code Pro", monospace;
+}
+
+// breakpoints
+$bp-small: 34.5em; ///////////// 552px
+$bp-smaller: 22em; ///////////// 352px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 50%;
+  }
+}
+
+body {
+  height: 100vh;
+  background: var(--bg-body);
+  padding: 1rem;
+
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+
+  display: grid;
+  place-items: center;
+
+  &.dark-mode {
+    --bg-body: #2b2b2b;
+    --color-text: #e0e0e0;
+    --color-background: #444;
+    --box-shadow-main: 28px 28px 76px #1c1c1c, -28px -28px 76px #3a3a3a;
+    --border-main: 1px solid #1c1c1c;
+    --border-main-hover: 1px solid #000;
+    --border-btn: 2px solid #000;
+  }
+
+  h1 {
+    @media only screen and (max-width: $bp-small) {
+      font-size: 4rem;
+    }
+  }
+}
