@@ -12,7 +12,7 @@ Responsive for all screen sizes.
 
 ## Checkout the live demo
 
-[Password Generator]()
+[Password Generator](https://peac-h.github.io/18_password-generator/)
 
 ## Built with
 
