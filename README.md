@@ -14,6 +14,10 @@ Responsive for all screen sizes.
 
 [Password Generator](https://peac-h.github.io/18_password-generator/)
 
+![Password Generator Light](https://raw.githubusercontent.com/Peac-h/18_password-generator/main/Screenshot--light.png)
+
+![Password Generator Dark](https://raw.githubusercontent.com/Peac-h/18_password-generator/main/Screenshot--dark.png)
+
 ## Built with
 
 - html
